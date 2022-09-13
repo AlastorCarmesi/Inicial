@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AlastorCarmesi/Inicial/issues"
   },
-  "homepage": "https://github.com/AlastorCarmesi/Inicial#readme"
+  "homepage": "https://github.com/AlastorCarmesi/Inicial#readme",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
 }
