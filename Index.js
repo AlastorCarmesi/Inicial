@@ -1,2 +1,1 @@
-console.log("Hola Mundo")
-console.log("Soy Hector")
+console.log("hola");
