@@ -1,12 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  </title>
+    <title>Plataforma de IOT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>Hola IOT</h1>
-    <p>Plataforma para visualizar los datos de la plataforma</p>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">IOT</a>
+    </nav>
+    
+    <div class="container">
+        <div class="col-md-5">
+           <div class="card">
+               <div class="card-body">
+                   <form action="/add" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="Email" placeholder="Correo Electronico" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="Nom" placeholder="Nombre Completo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="NomUs" placeholder="Nombre de Usuario" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="Cont" placeholder="Ingresa una contraseña" class="form-control">
+                    </div>
+                    <button class="btn btn-primary">Registrar</button>
+                </form>
+               </div>
+           </div>
+        </div>
+        <div class="col-md-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Email</th>
+                        <th>Nom</th>
+                        <th>NomUs</th>
+                        <th>Cont</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i = 0; i < valores.length; i++){  %>
+                        <tr>
+                            <td><%= i+1  %></td>
+                            <td><%= valores[i].Email  %></td>
+                            <td><%= valores[i].Nom  %></td>
+                            <td><%= valores[i].NomUs  %></td>
+                            <td><%= valores[i].Cont  %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
 </body>
 </html>
