@@ -29,7 +29,7 @@ router.get('/Ver', async (req, res)=>{
 });
 
 router.get('/Editar', async (req, res)=>{
-    const Email = await Email.find();
+    const Email = await Valor.find();
     console.log(Email);
     res.status(200).json({reg: Email});
 })
