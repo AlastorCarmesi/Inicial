@@ -4,8 +4,9 @@ const model = require('../model/Values')();
 const Valor = require('../model/Values');
  
 
-router.get('/', (req, res) =>{
-res.render('index')
+router.get('/', async (req, res) =>{
+const Val = await Valor.find();
+res.render('index.ejs',{Val});
 });
 
 router.post('/add', async (req, res) => {
