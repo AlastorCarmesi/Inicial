@@ -30,6 +30,38 @@
                         <input type="password" name="Cont" placeholder="Ingresa una contraseña" class="form-control">
                     </div>
                     <button class="btn btn-primary">Registrar</button>
+
+                <form>
+                    <div class="col-md-5">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Email</th>
+                                    <th>Nombre Completo</th>
+                                    <th>Nombre de Usuario</th>
+                                    <th>Contraseña</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for(var i = 0; i < Val.lenght; i++){ %>
+                                    <tr>
+                                        <td><%= i+1 %> </td>
+                                        <td><%= Val[i].Email %></td>
+                                        <td><%= Val[i].Nom %></td>
+                                        <td><%= Val[i].NomUs %></td>
+                                        <td><%= Val[i].Cont %></td>
+                                        <td>
+                                            <a href="/Del/<%=Val[i].id%>">Eliminar</a>
+                                            <a href="/Editar/<%=Val[i].id%>">Actualizar</a>
+                                        </td>
+                                    </tr>
+
+                               <% } %>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
                 </form>
                </div>
            </div>
