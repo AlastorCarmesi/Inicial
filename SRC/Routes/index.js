@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const model = require('../model/valores')();
-const Valor = require('../model/valores');
+const model = require('../model/Values')();
+const Valor = require('../model/Values');
  
 
 router.get('/', (req, res) =>{
