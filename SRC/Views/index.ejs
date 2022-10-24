@@ -44,13 +44,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% for(var i = 0; i < Val.lenght; i++){ %>
+                                <% for(var i = 0; i < Valor.lenght; i++){ %>
                                     <tr>
                                         <td><%= i+1 %> </td>
-                                        <td><%= Val[i].Email %></td>
-                                        <td><%= Val[i].Nom %></td>
-                                        <td><%= Val[i].NomUs %></td>
-                                        <td><%= Val[i].Cont %></td>
+                                        <td><%= Valor[i].Email %></td>
+                                        <td><%= Valor[i].Nom %></td>
+                                        <td><%= Valor[i].NomUs %></td>
+                                        <td><%= Valor[i].Cont %></td>
                                         <td>
                                             <a href="/SRC/Routes/index.js/Del/<%=Val[i].id%>">Eliminar</a>
                                             <a href="/SRC/Routes/index.js/Del/<%=Val[i].id%>">Actualizar</a>
