@@ -18,7 +18,7 @@ router.post('/add', async (req, res) => {
 
 router.get('/Del/:id',async(res, req) => {
     const id = req.params;
-    await Val.findByIdAndRemove(id);
+    await Valor.findByIdAndRemove(id);
     res.redirect('/');
     
 });
