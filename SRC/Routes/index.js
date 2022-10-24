@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const model = require('../model/Values')();
-const Valor = require('../model/Values');
+const model = require('../model/valores')();
+const Valor = require('../model/valores');
  
 
 router.get('/', (req, res) =>{
@@ -35,4 +35,3 @@ router.get('/Editar', async (req, res)=>{
 })
 
 module.exports = router;
-
