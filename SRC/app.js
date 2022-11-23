@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const indexRoutes = require('./Routes/index.js');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt')
 
 //escuchar servidor
 app.set('port', process.env.PORT || 3000);
